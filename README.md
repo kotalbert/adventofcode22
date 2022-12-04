@@ -1,12 +1,13 @@
 # Advent of Code 2022
 
-My attempt at [Advent of Code 2022](https://adventofcode.com/) in [Scala 3.1.3](https://www.scala-lang.org/download/3.1.3.html).
+My attempt at [Advent of Code 2022](https://adventofcode.com/) in
+[Scala 2.13.10](https://www.scala-lang.org/download/2.13.10.html).
 
 ## --- Day 1: Calorie Counting ---
 
 Suppose the Elves finish writing their items' Calories and end up with the following list:
 
-```
+```text
 1000
 2000
 3000
