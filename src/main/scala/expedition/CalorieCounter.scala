@@ -6,19 +6,28 @@ import scala.collection.mutable.ListBuffer
 object CalorieCounter {
 
   /**
-   * Find total calories carried per elf.
-   * @param elfInventory a list of dishes carried by each elf.
-   * @return list of calorie sums per each elf.
+   * A sum of calories carried by an individual elf.
    */
-  def makeTotalCarriedPerElf(elfInventory: Seq[String]): Seq[Int] = {
-    val lb = ListBuffer.empty[Int]
+  type Load = Int
+
+
+  /**
+   * Calculates total calories carried per elf and puts it to list.
+   *
+   * Let sum of calories carried by an individual elf be called Load.
+   *
+   * @param elfInventory a list of dishes carried by each elf.
+   * @return list of Load of each elf.
+   */
+  def makeLoadPerElfList(elfInventory: Seq[String]): Seq[Load] = {
+    val lb = ListBuffer.empty[Load]
 
     @tailrec
-    def collect(aSeq: Seq[String], acc: Int = 0): Seq[Int] = {
+    def collect(aSeq: Seq[String], acc: Load = 0): Seq[Load] = {
       val head :: tail = aSeq
 
       if (tail == Nil) {
-        lb.addOne(head.toInt + acc)
+        lb.addOne(Integer.parseInt(head) + acc)
         lb.toSeq
       }
       else {
@@ -26,7 +35,7 @@ object CalorieCounter {
           lb.addOne(acc)
           collect(tail)
         }
-        else collect(tail, acc + head.toInt)
+        else collect(tail, acc + Integer.parseInt(head))
       }
     }
 
@@ -35,10 +44,26 @@ object CalorieCounter {
   }
 
   /**
-   * Find max calorie carried by single elf.
+   * Find max Load by single elf.
    *
-   * @param elfTotals list of total calories carried per elf.
+   * Day 1 puzzle, part 1
+   *
+   * @param loads list of total calories carried per elf.
    * @return a max of the list
    */
-  def findMaxCaloriesCarried(elfTotals: Seq[Int]): Int = elfTotals.max
+  def findMaxLoad(loads: Seq[Load]): Load = loads.max
+
+  /**
+   * Find sum of top three loads.
+   *
+   * Day 1 puzzle, part 2
+   *
+   * @param loads a list of Load per elf
+   * @return sum of 3 highest loads
+   */
+  def findSumTopThreeLoads(loads: Seq[Load]): Load = {
+    require(loads.size >= 3)
+    loads.sorted.reverse.take(3).sum
+  }
+
 }
