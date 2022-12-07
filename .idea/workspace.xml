@@ -7,12 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe64b4c1-c1dd-4aa4-8c6c-18056a2b2ce6" name="Changes" comment="Add main that prints solutions to console.">
-      <change afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="fe64b4c1-c1dd-4aa4-8c6c-18056a2b2ce6" name="Changes" comment="Implement sun of top 3 loads">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/expedition/CalorieCounter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/expedition/CalorieCounter.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +25,34 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="adventofcode22" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10-sources.jar!/scala/collection/immutable/List.scala" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="ScalaTestRunConfiguration" name="CalorieCounterTest" />
+    </enabled-run-configurations>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -57,7 +77,19 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/pawel.daniluk-priv/IdeaProjects/adventofcode22",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -82,6 +114,7 @@
         <list />
       </option>
       <option name="testKind" value="Class" />
+      <option name="shortenClasspath" value="NONE" />
       <option name="testClassPath" value="expedition.CalorieCounterTest" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,8 +165,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="ScalaTest.CalorieCounterTest.An Utils.makeElfInventory should produce correct sequence" />
         <item itemvalue="ScalaTest.CalorieCounterTest" />
+        <item itemvalue="ScalaTest.CalorieCounterTest.An Utils.makeElfInventory should produce correct sequence" />
         <item itemvalue="ScalaTest.CalorieCounterTest.The CalorieCounter object should find a max of total calories carried per elf." />
         <item itemvalue="ScalaTest.CalorieCounterTest.The CalorieCounter object should Produce a list of total calories per elf." />
       </list>
@@ -150,6 +183,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670159332337</updated>
+      <workItem from="1670364766049" duration="8372000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor makeTotalCarriedPerElf to make it use recursion">
       <created>1670275511644</created>
@@ -193,16 +227,47 @@
       <option name="project" value="LOCAL" />
       <updated>1670277996821</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Introduce Load type as alias for Int">
+      <created>1670372521829</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670372521829</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Implement sun of top 3 loads">
+      <created>1670373647984</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670373647984</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Refactor makeTotalCarriedPerElf to make it use recursion" />
     <MESSAGE value="Add my puzzle input" />
     <MESSAGE value="Add file reading utility" />
     <MESSAGE value="Add main that prints solutions to console." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add main that prints solutions to console." />
+    <MESSAGE value="Introduce Load type as alias for Int" />
+    <MESSAGE value="Implement sun of top 3 loads" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement sun of top 3 loads" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
