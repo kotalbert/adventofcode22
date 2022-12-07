@@ -11,6 +11,7 @@ on:
       - master
       - develop
       - feature/*
+      - release/*
   pull_request:
     branches: [ "master" ]
 
